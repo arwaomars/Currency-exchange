@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Currency exchange</title>
+    <link rel="stylesheet" href="CSS/css.css" type="text/css" />
+    <script src="javaScript/javaScript.js"></script>
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h1>Currency exchange</h1>
+      </header>
+      <section class="content">
+        <p>Convert currency</p>
+
+        <section class="labels">
+          <label
+            >From :
+            <input
+              class="input"
+              type="text"
+              placeholder="e.g: SAR"
+              name="currentCurrency"
+              pattern="[A-Z]{3}"
+              title="three capital letter only"
+              maxlength="3"
+              minlength="3"
+              size="4"
+              required
+              onfocus="focusLabel(this)"
+            />
+          </label>
+
+          <label
+            >To :
+            <input
+              class="input"
+              type="text"
+              placeholder="e.g: USD"
+              name="newCurrency"
+              pattern="[A-Z]{3}"
+              title="three capital letter only"
+              maxlength="3"
+              minlength="3"
+              size="4"
+              required
+              onfocus="focusLabel(this)"
+            />
+          </label>
+
+          <label
+            >Amount:
+            <input
+              class="input"
+              type="number"
+              placeholder="e.g: 1"
+              name="amount"
+              id="amount"
+              title="numbers only"
+              min="1"
+              value="1"
+              onfocus="focusLabel(this)"
+            />
+          </label>
+          <br /><br />
+        </section>
+
+        <div id="result"></div>
+
+        <button onclick="getData()">convert</button>
+        <button onclick="displayError('clean done. you can add new data')">
+          clear
+        </button>
+      </section>
+    </main>
+  </body>
+</html>
